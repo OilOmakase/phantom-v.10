@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<data version="1.37.0">
+  <trigger type="quick_settings_tile_selected">
+    <useDefaultName>false</useDefaultName>
+    <name>ตั้งสวิต Tile 2 แล้วกด</name>
+    <enabled>false</enabled>
+    <tileID>TILE_2</tileID>
+    <label>Click to Login</label>
+    <iconType>BUILTIN</iconType>
+    <icon>ACCOUNTS</icon>
+    <customIconPath></customIconPath>
+    <shouldCollapsePanel>true</shouldCollapsePanel>
+  </trigger>
+  <condition type="expression">
+    <useDefaultName>false</useDefaultName>
+    <name>Installer </name>
+    <expression>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      value = global_PHANToM_Key;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eval(PHANToMbot1669)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </expression>
+  </condition>
+  <condition type="expression">
+    <useDefaultName>false</useDefaultName>
+    <name>Keyc</name>
+    <expression>trigger == "ตั้งสวิต Tile 2 แล้วกด"</expression>
+  </condition>
+  <action type="message_dialog">
+    <useDefaultName>false</useDefaultName>
+    <name> Message Error</name>
+    <title>Error source dowload!</title>
+    <message>ไม่สามารถโหลดทรัพยากรได้ 
+* สาเหตุ
+  - ใช้Automagic 1.38 ที่ติดตั้งผิดวิธี
+  - การเชื่อมต่ออินเทอร์เน็ตผิดปกติ
+
+* คำแนะนำ 
+ - ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต
+ - ใช้Automagic 1.37 ในการติดตั้ง
+
+*กรณีใช้Automagic 1.37 ติดตั้ง เมื่อติดตั้งแล้ว สามารถอัปเดทเป็น 1.38เพื่อใช้งานได้ แต่ อาจจะมีปัญหาในการใช้งานตามมา
+</message>
+    <buttonLabel></buttonLabel>
+    <timeoutEnabled>false</timeoutEnabled>
+    <timeout>60000</timeout>
+  </action>
+  <action type="http_request">
+    <useDefaultName>false</useDefaultName>
+    <name>API</name>
+    <url>https://raw.githubusercontent.com/Phantomguy7845/PHANToMFullProjectBeta/main/Loginkeys.html</url>
+    <verifyCertificates>true</verifyCertificates>
+    <basicAuthentication>false</basicAuthentication>
+    <username></username>
+    <clientCert>false</clientCert>
+    <clientCertPath></clientCertPath>
+    <httpMethod>GET</httpMethod>
+    <networkType>DEFAULT</networkType>
+    <httpContentType>X_WWW_FORM_URLENCODED</httpContentType>
+    <contentType>text/plain</contentType>
+    <generalTextData></generalTextData>
+    <formFieldList>Lastname=XYZ,Firstname=ABC</formFieldList>
+    <uploadFieldName>upload_field</uploadFieldName>
+    <uploadFilePath></uploadFilePath>
+    <timeout>60000</timeout>
+    <setCustomHTTPHeaders>false</setCustomHTTPHeaders>
+    <customHTTPHeaders></customHTTPHeaders>
+    <storeInVariable>true</storeInVariable>
+    <variable>PHANToMbot1669</variable>
+    <path>/storage/emulated/0/Download/file.bin</path>
+    <followRedirects>true</followRedirects>
+  </action>
+  <action type="delete_files">
+    <useDefaultName>false</useDefaultName>
+    <name>bzz.s</name>
+    <pathList>/storage/emulated/0/IX Installer.xml</pathList>
+    <showProgress>false</showProgress>
+  </action>
+  <action type="delete_files">
+    <useDefaultName>false</useDefaultName>
+    <name>bzz.ss</name>
+    <pathList>/storage/emulated/0/IX Installer.zip</pathList>
+    <showProgress>false</showProgress>
+  </action>
+  <action type="clear_automagic_log">
+    <useDefaultName>false</useDefaultName>
+    <name>Clear PHANToM Log</name>
+  </action>
+  <action type="execute_flows">
+    <useDefaultName>false</useDefaultName>
+    <name>gaga</name>
+    <includeFlowNamePatternList>PHANToM IX Lite 5 Installer</includeFlowNamePatternList>
+    <excludeFlowNamePatternList></excludeFlowNamePatternList>
+    <skipDisabledFlowsWithoutError>false</skipDisabledFlowsWithoutError>
+    <waitForFlowsToFinish>false</waitForFlowsToFinish>
+    <returnLocalVariablesToCallingFlow>false</returnLocalVariablesToCallingFlow>
+  </action>
+  <action type="download_url">
+    <useDefaultName>false</useDefaultName>
+    <name>icon.zip</name>
+    <url>https://github.com/Phantomguy7845/PHANToM_Full_Project_Final/raw/main/PHANToM%20icon.zip</url>
+    <directory>/storage/emulated/0</directory>
+    <showProgress>false</showProgress>
+  </action>
+  <action type="unzip_files">
+    <useDefaultName>false</useDefaultName>
+    <name>Install resource</name>
+    <zipFilePath>/storage/emulated/0/IX Installer.zip</zipFilePath>
+    <targetPath>/storage/emulated/0</targetPath>
+    <showProgress>false</showProgress>
+  </action>
+  <action type="script">
+    <useDefaultName>false</useDefaultName>
+    <name>Keys Convert</name>
+    <script>global_PHANToM_Key = value</script>
+  </action>
+  <action type="input_dialog">
+    <useDefaultName>false</useDefaultName>
+    <name>Login Page</name>
+    <title>Login </title>
+    <inputDialogType>PASSWORD</inputDialogType>
+    <prompt>ใส่รหัสจ้า</prompt>
+    <inputValues></inputValues>
+    <defaultValue></defaultValue>
+    <titleFontSize>DEFAULT</titleFontSize>
+    <promptFontSize>DEFAULT</promptFontSize>
+    <fontSize>DEFAULT</fontSize>
+    <timeoutEnabled>false</timeoutEnabled>
+    <timeout>60000</timeout>
+    <defaultValueOnTimeout></defaultValueOnTimeout>
+    <showWhenLocked>false</showWhenLocked>
+    <turnScreenOn>false</turnScreenOn>
+    <keepScreenOn>false</keepScreenOn>
+    <enlargeDialogWidth>false</enlargeDialogWidth>
+    <keyboardCapitalizeSentences>false</keyboardCapitalizeSentences>
+  </action>
+  <action type="message_dialog">
+    <useDefaultName>true</useDefaultName>
+    <name>Message Dialog:  รหัสผ่านไม่ถูกต้อง</name>
+    <title></title>
+    <message>รหัสผ่านไม่ถูกต้อง</message>
+    <buttonLabel></buttonLabel>
+    <timeoutEnabled>false</timeoutEnabled>
+    <timeout>60000</timeout>
+  </action>
+  <action type="open_browser_url">
+    <useDefaultName>false</useDefaultName>
+    <name>Registeration PHANToM IX Lite</name>
+    <url>https://docs.google.com/forms/u/1/d/1dlA8vwYxi4CEPL-wUkjSdiwqeeY5cnGb_YfHF64yLcI/edit?usp=drivesdk&amp;chromeless=1</url>
+    <explicitComponent>false</explicitComponent>
+    <packageName></packageName>
+    <className></className>
+    <appName></appName>
+  </action>
+  <action type="download_url">
+    <useDefaultName>false</useDefaultName>
+    <name>Source Dowload1</name>
+    <url>https://github.com/Phantomguy7845/RBH-Project/raw/main/IX%20Installer.zip</url>
+    <directory>/storage/emulated/0</directory>
+    <showProgress>false</showProgress>
+  </action>
+  <action type="set_flow_state">
+    <useDefaultName>false</useDefaultName>
+    <name>tw</name>
+    <enable>true</enable>
+    <includeFlowNamePatternList>PHANToM IX Lite 5 Installer</includeFlowNamePatternList>
+    <excludeFlowNamePatternList></excludeFlowNamePatternList>
+  </action>
+  <action type="unzip_files">
+    <useDefaultName>false</useDefaultName>
+    <name>Unzipicon</name>
+    <zipFilePath>/storage/emulated/0/PHANToM icon.zip</zipFilePath>
+    <targetPath>/storage/emulated/0</targetPath>
+    <showProgress>false</showProgress>
+  </action>
+  <action type="import_flows">
+    <useDefaultName>false</useDefaultName>
+    <name>vgjm</name>
+    <path>/storage/emulated/0/IX Installer.xml</path>
+    <replace>true</replace>
+  </action>
+  <flow type="flow">
+    <name>PHANToM IX Lite 5  (9.5.0)</name>
+    <description>ตั้งสวิตและกดที่สวิตเท่านั้น(Tile2)</description>
+    <group>1.2</group>
+    <enabled>false</enabled>
+    <executionPolicy>PARALLEL</executionPolicy>
+    <triggercontainer id="t1" x="70.0" y="52.5">
+      <trigger>ตั้งสวิต Tile 2 แล้วกด</trigger>
+    </triggercontainer>
+    <actioncontainer id="t2" x="-35.0" y="227.5">Keys Convert</actioncontainer>
+    <actioncontainer id="t3" x="-35.0" y="437.5">Clear PHANToM Log</actioncontainer>
+    <conditioncontainer id="t4" x="-35.0" y="542.5">Installer </conditioncontainer>
+    <actioncontainer id="t5" x="-35.0" y="647.5">icon.zip</actioncontainer>
+    <actioncontainer id="t6" x="-35.0" y="752.5">tw</actioncontainer>
+    <actioncontainer id="t7" x="-35.0" y="857.5">Source Dowload1</actioncontainer>
+    <actioncontainer id="t8" x="-35.0" y="962.5">vgjm</actioncontainer>
+    <actioncontainer id="t9" x="-35.0" y="1067.5">bzz.ss</actioncontainer>
+    <actioncontainer id="t10" x="175.0" y="1067.5">Clear PHANToM Log</actioncontainer>
+    <actioncontainer id="t11" x="175.0" y="962.5">bzz.s</actioncontainer>
+    <actioncontainer id="t12" x="175.0" y="857.5">Install resource</actioncontainer>
+    <actioncontainer id="t13" x="175.0" y="647.5">gaga</actioncontainer>
+    <conditioncontainer id="t14" x="175.0" y="542.5">Keyc</conditioncontainer>
+    <actioncontainer id="t15" x="175.0" y="332.5">Login Page</actioncontainer>
+    <actioncontainer id="t16" x="175.0" y="227.5">Message Dialog:  รหัสผ่านไม่ถูกต้อง</actioncontainer>
+    <actioncontainer id="t17" x="175.0" y="752.5">Unzipicon</actioncontainer>
+    <actioncontainer id="t18" x="-35.0" y="332.5">Registeration PHANToM IX Lite</actioncontainer>
+    <actioncontainer id="t19" x="175.0" y="437.5">API</actioncontainer>
+    <actioncontainer id="t20" x="70.0" y="1207.5"> Message Error</actioncontainer>
+    <connection from="t1" to="t14" type="NORMAL" sourcePosition="SOUTH" targetPosition="WEST" />
+    <connection from="t2" to="t19" type="NORMAL" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t4" to="t16" type="EXCEPTION" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t4" to="t16" type="FALSE" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t4" to="t5" type="TRUE" sourcePosition="EAST" targetPosition="EAST" />
+    <connection from="t5" to="t17" type="NORMAL" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t6" to="t13" type="NORMAL" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t6" to="t10" type="EXCEPTION" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t7" to="t12" type="NORMAL" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t7" to="t10" type="EXCEPTION" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t8" to="t11" type="NORMAL" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t8" to="t10" type="EXCEPTION" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t9" to="t6" type="NORMAL" sourcePosition="EAST" targetPosition="EAST" />
+    <connection from="t9" to="t10" type="EXCEPTION" sourcePosition="EAST" targetPosition="WEST" />
+    <connection from="t10" to="t20" type="NORMAL" sourcePosition="WEST" targetPosition="NORTH" />
+    <connection from="t11" to="t9" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t11" to="t10" type="EXCEPTION" sourcePosition="WEST" targetPosition="WEST" />
+    <connection from="t12" to="t8" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t12" to="t10" type="EXCEPTION" sourcePosition="WEST" targetPosition="WEST" />
+    <connection from="t13" to="t3" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t13" to="t10" type="EXCEPTION" sourcePosition="WEST" targetPosition="WEST" />
+    <connection from="t14" to="t15" type="TRUE" sourcePosition="WEST" targetPosition="WEST" />
+    <connection from="t15" to="t2" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t16" to="t18" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t17" to="t7" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t17" to="t10" type="EXCEPTION" sourcePosition="WEST" targetPosition="WEST" />
+    <connection from="t18" to="t3" type="NORMAL" sourcePosition="EAST" targetPosition="EAST" />
+    <connection from="t19" to="t4" type="NORMAL" sourcePosition="WEST" targetPosition="EAST" />
+    <connection from="t19" to="t20" type="EXCEPTION" sourcePosition="WEST" targetPosition="NORTH" />
+  </flow>
+</data>
