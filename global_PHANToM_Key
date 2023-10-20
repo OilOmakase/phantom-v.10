@@ -1,1 +1,2 @@
-global_PHANToM_Key = value
+if ("PHANToMMaster" == global_PHANToM_Key){true}
+else if ("7dayrbhtester" == global_PHANToM_Key){true}
